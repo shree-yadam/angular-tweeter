@@ -46,7 +46,7 @@ main {
 .container {
   display: flex;
   flex-direction: row;
-  margin-top: 240px;
+  margin-top: 80px;
   justify-content: flex-start;
 }
 
