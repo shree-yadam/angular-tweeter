@@ -17,7 +17,7 @@
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px;
+  font-size: 12px;
   font-family: "Source Sans Pro", sans-serif;
   display: flex;
   flex-direction: column;
@@ -45,12 +45,12 @@ main {
 
 .container {
   display: flex;
-  flex-direction: row;
-  margin-top: 80px;
+  flex-direction: column;
+  margin-top: 30px;
   justify-content: flex-start;
+  align-items: center;
 }
 
 #main-container{
   width: 66.7%;
-  margin: 20px;
 }

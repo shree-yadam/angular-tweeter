@@ -8,13 +8,16 @@
   color: white;
   width: 30em;
   float: left;
-  margin: 30px;
-  height: 20em;
+  height: 15em;
 }
 
 .profile-pic {
   position: relative;
   top: 30px;
+}
+
+.profile-pic img{
+  height: 10em;;
 }
 
 .profile-name {

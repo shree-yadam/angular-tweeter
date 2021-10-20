@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from './navbar/navbar.component';
+import { TweetFormComponent } from './tweet-form/tweet-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    NavbarComponent
+    NavbarComponent,
+    TweetFormComponent
   ],
   imports: [
     BrowserModule,
