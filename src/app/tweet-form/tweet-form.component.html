@@ -1,25 +1,43 @@
 <section class="new-tweet">
   <h2>Compose Tweet</h2>
 
-    <div class="tweet-input">
-      <label htmlFor="tweet-text">What are you humming about?</label>
-      <textarea class="text" id="tweet-text" [(ngModel)]="currentTweet"></textarea>
+  <div class="tweet-input">
+    <label htmlFor="tweet-text">What are you humming about?</label>
+    <textarea class="text" id="tweet-text" [(ngModel)]="currentTweet"></textarea>
+  </div>
+  <div class="error">
+    <div class="error-text">
+      <fa-icon [icon]="faExclamationTriangle"></fa-icon>
+      <h6 id="error-msg">Please enter new tweet before posting!</h6>
     </div>
-    <div class="error">
-      <div class="error-text">
-        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-        <h6 id="error-msg">Please enter new tweet before posting!</h6>
-        <fa-icon [icon]="faExclamationTriangle"></fa-icon>
-      </div>
-      <span class="error-close">&times;</span>
-    </div>
-    <div class="form-footer">
-      <button (click)="onTweetSubmit()">Tweet</button>
-      <output name="counter" class="counter" htmlFor="tweet-text">
-        {{140 - currentTweet.length}}
-      </output>
-    </div>
+    <span class="error-close">&times;</span>
+  </div>
+  <div class="form-footer">
+    <button (click)="onTweetSubmit()">Tweet</button>
+    <output name="counter" class="counter" htmlFor="tweet-text">
+      {{140 - currentTweet.length}}
+    </output>
+  </div>
 </section>
 <div *ngFor="let tweet of tweetList">
-  {{tweet}}
-<div>
+  <article class="tweet">
+    <header>
+      <div class="user-profile">
+        <img src={{tweet.avatar}} alt="tweet profile" />
+        <p>{{tweet.name}}</p>
+      </div>
+      <div class="user-handle">
+        <p>{{tweet.handle}}</p>
+      </div>
+    </header>
+    <div class="old-tweet">{{tweet.text}}</div>
+    <footer>
+      <p class="tweet-time">{{tweet.date}}</p>
+      <span>
+        <fa-icon class="fa-flag" [icon]="faFlag"></fa-icon>
+       <fa-icon class="fa-retweet" [icon]="faRetweet"></fa-icon>
+       <fa-icon class="fa-heart" [icon]="faHeart"></fa-icon>
+      </span>
+    </footer>
+  </article>
+  <div>
