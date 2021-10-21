@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-tweet-form',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TweetFormComponent implements OnInit {
 
+  faExclamationTriangle = faExclamationTriangle;
+  tweetList = [];
+  currentTweet = "";
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
