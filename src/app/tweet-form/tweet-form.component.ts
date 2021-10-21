@@ -10,11 +10,16 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class TweetFormComponent implements OnInit {
 
   faExclamationTriangle = faExclamationTriangle;
-  tweetList = [];
+  tweetList: string[] = [];
   currentTweet = "";
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onTweetSubmit() {
+    this.tweetList.unshift(this.currentTweet);
+    this.currentTweet = "";
   }
 }

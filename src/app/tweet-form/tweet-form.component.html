@@ -14,9 +14,12 @@
       <span class="error-close">&times;</span>
     </div>
     <div class="form-footer">
-      <button type="submit">Tweet</button>
+      <button (click)="onTweetSubmit()">Tweet</button>
       <output name="counter" class="counter" htmlFor="tweet-text">
         {{140 - currentTweet.length}}
       </output>
     </div>
 </section>
+<div *ngFor="let tweet of tweetList">
+  {{tweet}}
+<div>
